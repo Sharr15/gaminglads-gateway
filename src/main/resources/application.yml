@@ -1,0 +1,16 @@
+zuul:
+  prefix: /
+  stripPrefix: true
+  routes:
+    user-service:
+      path: /user/**
+      service-id: USER-SERVICE
+      stripPrefix: false
+    profile-service:
+      path: /profile/**
+      service-id: PROFILE-SERVICE
+      stripPrefix: false
+
+ribbon:
+  eureka:
+    enabled: true
