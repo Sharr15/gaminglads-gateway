@@ -10,10 +10,14 @@ zuul:
       path: /profile/**
       service-id: PROFILE-SERVICE
       stripPrefix: false
+  host:
+    connect-timeout-millis: 90000
+    socket-timeout-millis: 90000
 
-ribbon:
-  eureka:
-    enabled: true
+  ribbon:
+    eureka:
+      eager-load:
+        enabled: true
 
 # Increase the Hystrix timeout to 60s (globally)
 hystrix:
@@ -21,5 +25,8 @@ hystrix:
     default:
       execution:
         isolation:
+          strategy: THREAD
           thread:
             timeoutInMilliseconds: 60000
+
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
