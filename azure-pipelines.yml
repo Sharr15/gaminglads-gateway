@@ -18,7 +18,7 @@ jobs:
         inputs:
           command: 'buildAndPush'
           Dockerfile: 'Dockerfile'
-          buildContext: 'APIRootName'
+          buildContext: 'GamingLads'
           tags: |
             $(Build.BuildId)
             latest
