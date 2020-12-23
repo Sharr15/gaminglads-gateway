@@ -4,6 +4,8 @@ variables:
   ENV: test
 jobs:
   - job: "Compile"
+    pool:
+      vmImage: 'windows-latest'
     steps:
       - task: Maven@3
         displayName: Compiling Image
