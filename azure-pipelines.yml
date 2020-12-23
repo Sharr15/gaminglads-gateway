@@ -20,7 +20,7 @@ jobs:
           Dockerfile: 'Dockerfile'
           buildContext: 'APIRootName'
           tags: |
-            $(Build.SourcesDirectory)
+            $(Build.BuildId)
             latest
       - task: PushToHeroku@0
         inputs:
