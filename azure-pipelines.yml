@@ -18,7 +18,6 @@ jobs:
         inputs:
           command: 'buildAndPush'
           Dockerfile: 'Dockerfile'
-          buildContext: 'GamingLads'
           tags: |
             $(Build.BuildId)
             latest
