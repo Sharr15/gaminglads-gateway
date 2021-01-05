@@ -14,6 +14,12 @@ zuul:
     connect-timeout-millis: 90000
     socket-timeout-millis: 90000
 
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: https://gaminglads-discoveryserver.herokuapp.com/eureka
   ribbon:
     eureka:
       eager-load:
