@@ -9,6 +9,7 @@ zuul:
       stripPrefix: false
     profile-service:
       path: /profile/**
+      url: https://gaminglads-profileservice.herokuapp.com/
       service-id: PROFILE-SERVICE
       stripPrefix: false
   host:
