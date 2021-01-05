@@ -4,6 +4,7 @@ zuul:
   routes:
     user-service:
       path: /user/**
+      url: https://gaminglads-userservice.herokuapp.com/
       service-id: USER-SERVICE
       stripPrefix: false
     profile-service:
